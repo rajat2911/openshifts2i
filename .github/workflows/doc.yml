@@ -21,18 +21,18 @@ jobs:
           sudo mv terraform-docs /usr/local/bin/
       - name: Generate Terraform Docs
         run: |          
-          rm -rf documentation    
+          rm -rf docs    
       - name: Generate Terraform Docs
         run: |          
-          mkdir documentation
-          terraform-docs markdown . > documentation/terraform-doc.md
+          mkdir docs
+          terraform-docs markdown . > docs/terraform-doc.md
       - name: Commit Terraform Docs
         uses: EndBug/add-and-commit@v8
         with:
           author_name: Rajat Verma
           author_email: vrajat29@gmail.com
           message: 'Updated Terraform Docs'
-          add: 'documentation/terraform-doc.md'
+          add: 'docs/terraform-doc.md'
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
