@@ -21,6 +21,7 @@ jobs:
           sudo mv terraform-docs /usr/local/bin/
       - name: Generate Terraform Docs
         run: |
+          mkdir docs
           terraform-docs markdown . > docs/terraform-doc.md
       - name: Commit Terraform Docs
         uses: EndBug/add-and-commit@v8
