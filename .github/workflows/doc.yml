@@ -21,8 +21,8 @@ jobs:
           sudo mv terraform-docs /usr/local/bin/
       - name: Generate Terraform Docs
         run: |
-          mkdir -p docs
-          terraform-docs markdown . > docs/terraform-doc.md
+          mkdir docs
+          terraform-docs markdown . > "docs/terraform-doc-$(date +'%Y-%m-%d-%H-%M-%S').md"
       - name: Commit Terraform Docs
         uses: EndBug/add-and-commit@v8
         with:
