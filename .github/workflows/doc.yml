@@ -1,33 +1,18 @@
-name: Generate Terraform Docs
+name: Generate terraform docs
 on:
-  pull_request:
-    branches:
-      - master
+  - pull_request
 jobs:
-  build:
+  docs:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      - name: Install Terraform
-        uses: hashicorp/setup-terraform@v1
-        with:
-          terraform_version: 1.0.5
-      - name: Install Terraform Docs
-        run: |
-          curl -LO https://github.com/terraform-docs/terraform-docs/releases/download/v0.16.0/terraform-docs-v0.16.0-$(uname)-amd64.tar.gz
-          tar -zxvf terraform-docs-v0.16.0-$(uname)-amd64.tar.gz
-          chmod +x terraform-docs
-          sudo mv terraform-docs /usr/local/bin/
-      - name: Generate Terraform Docs
-        run: |
-          mkdir docs
-          terraform-docs markdown . > docs/terraform-doc.md
-      - name: Commit Terraform Docs
-        uses: EndBug/add-and-commit@v8
-        with:
-          author_name: Rajat Verma
-          author_email: vrajat29@gmail.com
-          message: 'Updated Terraform Docs'
-          add: 'docs/terraform-doc.md'
-          
+    - uses: actions/checkout@v3
+      with:
+        ref: ${{ github.event.pull_request.head.ref }}
+
+    - name: Render terraform docs inside the README.md and push changes back to PR branch
+      uses: terraform-docs/gh-actions@v1.0.0
+      with:
+        working-dir: .
+        output-file: terraform-doc.md
+        output-method: inject
+        git-push: "true"
