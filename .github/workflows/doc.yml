@@ -22,7 +22,8 @@ jobs:
       - name: Generate Terraform Docs
         run: |
           mkdir -p docs
-          terraform-docs markdown . > "docs/terraform-doc-$(date +'%Y-%m-%d-%H-%M-%S').md"
+          rm -rf docs/*
+          terraform-docs markdown . > docs/terraform-doc.md
       - name: Commit Terraform Docs
         uses: EndBug/add-and-commit@v8
         with:
