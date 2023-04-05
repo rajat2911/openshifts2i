@@ -1,6 +1,6 @@
 name: Generate Terraform Docs
 on:
-  push:
+  pull_request:
     branches:
       - master
 jobs:
@@ -21,8 +21,6 @@ jobs:
           sudo mv terraform-docs /usr/local/bin/
       - name: Generate Terraform Docs
         run: |
-          mkdir -p docs
-          rm -rf docs/*
           terraform-docs markdown . > docs/terraform-doc.md
       - name: Commit Terraform Docs
         uses: EndBug/add-and-commit@v8
