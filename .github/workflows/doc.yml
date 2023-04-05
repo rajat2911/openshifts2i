@@ -30,4 +30,4 @@ jobs:
           author_name: Rajat Verma
           author_email: vrajat29@gmail.com
           message: 'Updated Terraform Docs'
-          add: 'docs/terraform-doc.md'
+          add: 'documentation/terraform-doc.md'
