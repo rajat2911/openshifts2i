@@ -2,7 +2,7 @@ name: Generate Terraform Docs
 on:
   push:
     branches:
-      - QBIT-1884-automating-the-tf-doc
+      - master
 jobs:
   build:
     runs-on: ubuntu-latest
