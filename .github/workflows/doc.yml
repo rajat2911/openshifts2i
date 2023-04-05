@@ -21,7 +21,10 @@ jobs:
           sudo mv terraform-docs /usr/local/bin/
       - name: Generate Terraform Docs
         run: |          
-          rm -rf documentation && mkdir documentation
+          rm -rf documentation    
+      - name: Generate Terraform Docs
+        run: |          
+          mkdir documentation
           terraform-docs markdown . > documentation/terraform-doc.md
       - name: Commit Terraform Docs
         uses: EndBug/add-and-commit@v8
