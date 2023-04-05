@@ -2,7 +2,7 @@ name: Generate Terraform Docs
 on:
   push:
     branches:
-      - openshifts2i
+      - master
 jobs:
   build:
     runs-on: ubuntu-latest
