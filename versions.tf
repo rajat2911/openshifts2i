@@ -1,4 +1,4 @@
-/*terraform {
+terraform {
   required_version = "~> 1.1.0"
   required_providers {
     aws = {
@@ -12,7 +12,7 @@
     path = "terraform-sandy/terraform.tfstate"
 
   }
-}*/
+}
 
 # Terraform Block
 /*terraform {
