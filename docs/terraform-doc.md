@@ -2,14 +2,14 @@
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | ~> 1.1.0 |
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | ~> 1.1.0 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 3.0.0 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 3.0 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | 1.2.3.4.4.4.4 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | 4.19.0 |
 
 ## Providers
 
-No providers.
+| Name | Version |
+|------|---------|
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 4.19.0 |
 
 ## Modules
 
@@ -17,16 +17,21 @@ No modules.
 
 ## Resources
 
-No resources.
+| Name | Type |
+|------|------|
+| [aws_eip.my-eip](https://registry.terraform.io/providers/hashicorp/aws/4.19.0/docs/resources/eip) | resource |
+| [aws_instance.myec2instance](https://registry.terraform.io/providers/hashicorp/aws/4.19.0/docs/resources/instance) | resource |
+| [aws_internet_gateway.myigw](https://registry.terraform.io/providers/hashicorp/aws/4.19.0/docs/resources/internet_gateway) | resource |
+| [aws_route.myroute](https://registry.terraform.io/providers/hashicorp/aws/4.19.0/docs/resources/route) | resource |
+| [aws_route_table.myroutetable](https://registry.terraform.io/providers/hashicorp/aws/4.19.0/docs/resources/route_table) | resource |
+| [aws_route_table_association.myroutetableassociation](https://registry.terraform.io/providers/hashicorp/aws/4.19.0/docs/resources/route_table_association) | resource |
+| [aws_security_group.mysecuritygroup](https://registry.terraform.io/providers/hashicorp/aws/4.19.0/docs/resources/security_group) | resource |
+| [aws_subnet.mysubnet](https://registry.terraform.io/providers/hashicorp/aws/4.19.0/docs/resources/subnet) | resource |
+| [aws_vpc.myvpc](https://registry.terraform.io/providers/hashicorp/aws/4.19.0/docs/resources/vpc) | resource |
 
 ## Inputs
 
-| Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
-| <a name="input_IN"></a> [IN](#input\_IN) | Intancey type value | `string` | `"t2.small"` | no |
-| <a name="input_aws_ami"></a> [aws\_ami](#input\_aws\_ami) | AWS AMI Values | `string` | `"ami-04ad2567c9e3d7893"` | no |
-| <a name="input_az"></a> [az](#input\_az) | availability\_zones value | `string` | `"us-east-1a"` | no |
-| <a name="input_sub-net"></a> [sub-net](#input\_sub-net) | Subnet values | `string` | `"subnet-008b0a0d1c302b578"` | no |
+No inputs.
 
 ## Outputs
 
