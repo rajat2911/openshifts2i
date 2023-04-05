@@ -15,7 +15,7 @@ terraform {
 }
 
 # Terraform Block
-/*terraform {
+terraform {
   required_version = "~> 0.15.4"
   required_providers {
     aws = {
@@ -27,9 +27,9 @@ terraform {
       version = "3.0.1"
     }    
   }
-}*/
+}
 
-/*terraform {
+terraform {
 required_version = " ~> 0.15.4"
   required_providers {
     aws = {
@@ -37,11 +37,10 @@ required_version = " ~> 0.15.4"
       version = ">= 3.27.0, <= 3.40.0" 
     }
   }
-}*/
+}
 
 
 
-/*
 Play with Terraform Version
   required_version = "~> 0.14.3" 
   required_version = "= 0.14.4"  
@@ -56,7 +55,7 @@ Play with Provider Version
       version = ">= 3.0.0, <= 3.21.0"
       version = "~> 2.0"
       version = "~> 3.0"            
-*/
+
 /*terraform {
   required_version = "~> 1.1.0"
   required_providers {
